@@ -3,6 +3,7 @@
    Bootstrap 5 + CSS personalizado
    ========================================================= */
 
+/* Paleta, cores de texto, bordas e raio padrão reutilizados no site. */
 :root {
     --cu-navy: #020d1e;
     --cu-navy-2: #06152a;
@@ -36,6 +37,7 @@ a {
     text-decoration: none;
 }
 
+/* Cabeçalho fixo semitransparente, com desfoque do conteúdo atrás dele. */
 .site-header {
     background: rgba(2, 13, 30, .82);
     backdrop-filter: blur(14px);
@@ -67,6 +69,7 @@ a {
     color: #fff !important;
 }
 
+/* Botão de ação principal e seu feedback visual ao passar o mouse. */
 .btn-orange {
     color: #fff;
     background: var(--cu-orange);
@@ -84,6 +87,7 @@ a {
     box-shadow: 0 12px 28px rgba(255,122,0,.22);
 }
 
+/* Área de abertura: ocupa toda a tela e cria o fundo escuro com luzes da marca. */
 .hero-section {
     position: relative;
     min-height: 100vh;
@@ -107,6 +111,7 @@ a {
     mask-image: linear-gradient(to bottom, black, transparent);
 }
 
+/* Círculos desfocados que dão profundidade ao fundo da área de abertura. */
 .hero-glow {
     position: absolute;
     border-radius: 50%;
@@ -139,6 +144,7 @@ a {
     letter-spacing: .16em;
 }
 
+/* Título principal fluido: aumenta ou diminui conforme a largura da tela. */
 .display-title {
     max-width: 720px;
     margin: 18px 0;
@@ -179,6 +185,7 @@ a {
     font-size: .75rem;
 }
 
+/* Cartão da imagem principal com efeito de vidro e sombra. */
 .hero-card {
     position: relative;
     width: min(520px, 100%);
@@ -207,6 +214,7 @@ a {
     border-radius: 20px;
 }
 
+/* Espaçamento vertical comum e variações de fundo das seções. */
 .section {
     padding: 100px 0;
 }
@@ -241,6 +249,7 @@ a {
     line-height: 1.75;
 }
 
+/* Cartões de serviços: ganham elevação e borda azul no hover. */
 .service-card {
     padding: 34px;
     border: 1px solid var(--cu-border);
@@ -287,6 +296,7 @@ a {
     font-size: clamp(2rem, 4vw, 3.2rem);
 }
 
+/* Lista de benefícios com marcadores circulares. */
 .check-list {
     display: grid;
     gap: 15px;
@@ -305,6 +315,7 @@ a {
     font-weight: 800;
 }
 
+/* Estilo base dos cartões de citação usados no site. */
 .quote-card {
     position: relative;
     padding: 48px;
@@ -428,6 +439,7 @@ a {
     }
 }
 
+/* Chamada para ação antes do rodapé. */
 .cta-section {
     padding: 80px 0;
     background: #fff;
@@ -454,6 +466,7 @@ a {
     color: rgba(255,255,255,.62);
 }
 
+/* Rodapé escuro com contraste para links e marca. */
 .site-footer {
     color: rgba(255,255,255,.6);
     background: #010a16;
@@ -474,11 +487,51 @@ a {
     color: var(--cu-blue-light);
 }
 
+/* Links de redes sociais usados na página de contato e no rodapé. */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 6px 13px;
+    border: 1px solid var(--cu-border);
+    border-radius: 999px;
+    color: var(--cu-navy);
+    font-size: .88rem;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.social-links a:hover {
+    border-color: var(--cu-blue);
+    color: var(--cu-blue);
+    transform: translateY(-2px);
+}
+
+.social-links--footer {
+    justify-content: flex-end;
+}
+
+.site-footer .social-links a {
+    border-color: rgba(255,255,255,.16);
+    color: var(--cu-blue-light);
+}
+
+.site-footer .social-links a:hover {
+    border-color: var(--cu-orange);
+    color: #fff;
+}
+
 .site-footer p {
     font-size: .85rem;
 }
 
-/* Páginas internas */
+/* Páginas internas: banner superior, conteúdo claro e cartões de contato. */
 .inner-hero {
     padding: 160px 0 90px;
     color: #fff;
@@ -522,6 +575,7 @@ textarea.form-control {
     min-height: 150px;
 }
 
+/* Ajustes para tablet e telas menores: navegação e CTA passam a ocupar mais espaço. */
 @media (max-width: 991.98px) {
     .navbar-collapse {
         margin-top: 10px;
@@ -549,6 +603,7 @@ textarea.form-control {
     }
 }
 
+/* Ajustes específicos para celulares: reduz tamanhos, espaçamentos e logo. */
 @media (max-width: 575.98px) {
     .section {
         padding: 72px 0;
@@ -578,5 +633,9 @@ textarea.form-control {
 
     .brand-logo {
         width: 112px;
+    }
+
+    .social-links--footer {
+        justify-content: flex-start;
     }
 }

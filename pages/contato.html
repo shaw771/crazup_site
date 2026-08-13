@@ -27,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contato.html">Contato</a></li>
                     <li class="nav-item ms-lg-2"><a class="btn btn-orange btn-sm px-3" href="contato.html">Fale conosco</a></li>
                 </ul>
             </div>
@@ -61,12 +61,19 @@
                 <div><a href="https://crazyup.com.br" target="_blank" rel="noopener">crazyup.com.br</a></div>
             </div>
             <div class="mb-3">
-                <strong>📱 WhatsApp</strong>
-                <div class="text-muted">Adicione aqui o número comercial da Crazy Up.</div>
+                <strong>WhatsApp</strong>
+                <div><a href="https://wa.me/5512991503338" target="_blank" rel="noopener">(12) 99150-3338</a></div>
+            </div>
+            <div class="mb-3">
+                <strong>E-mail</strong>
+                <div><a href="mailto:c.eusth@gmail.com">c.eusth@gmail.com</a></div>
             </div>
             <div>
-                <strong>✉ E-mail</strong>
-                <div class="text-muted">Adicione aqui o e-mail comercial da Crazy Up.</div>
+                <strong>Redes sociais</strong>
+                <div class="social-links mt-2">
+                    <a href="https://www.instagram.com/crazyup.com.br/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.linkedin.com/in/carloseust/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
             </div>
         </div>
     </div>
@@ -77,19 +84,19 @@
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label for="name" class="form-label fw-semibold">Nome</label>
-                        <input type="text" class="form-control" id="name" placeholder="Seu nome" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" autocomplete="name" required>
                     </div>
                     <div class="col-md-6">
                         <label for="email" class="form-label fw-semibold">E-mail</label>
-                        <input type="email" class="form-control" id="email" placeholder="voce@email.com" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="voce@email.com" autocomplete="email" required>
                     </div>
                     <div class="col-12">
                         <label for="company" class="form-label fw-semibold">Empresa</label>
-                        <input type="text" class="form-control" id="company" placeholder="Nome da empresa">
+                        <input type="text" class="form-control" id="company" name="company" placeholder="Nome da empresa" autocomplete="organization">
                     </div>
                     <div class="col-12">
                         <label for="service" class="form-label fw-semibold">O que você precisa?</label>
-                        <select class="form-select" id="service" required>
+                        <select class="form-select" id="service" name="service" required>
                             <option value="">Selecione uma opção</option>
                             <option>Site profissional</option>
                             <option>Landing page</option>
@@ -99,13 +106,15 @@
                     </div>
                     <div class="col-12">
                         <label for="message" class="form-label fw-semibold">Mensagem</label>
-                        <textarea class="form-control" id="message" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
+                        <textarea class="form-control" id="message" name="message" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-orange btn-lg w-100" type="submit">Enviar mensagem</button>
+                        <button class="btn btn-orange btn-lg w-100" type="submit">Enviar pelo WhatsApp</button>
                     </div>
                     <div class="col-12">
-                        <div id="formMessage" class="small text-muted"></div>
+                        <div id="formMessage" class="small text-muted" role="status" aria-live="polite">
+                            Ao enviar, você será direcionado ao WhatsApp com sua mensagem preenchida.
+                        </div>
                     </div>
                 </div>
             </form>
@@ -127,6 +136,10 @@
             <div class="col-md-6 text-md-end">
                 <p class="mb-0">© <span id="year"></span> Crazy Up. Todos os direitos reservados.</p>
                 <a href="https://crazyup.com.br" target="_blank" rel="noopener">crazyup.com.br</a>
+                <div class="social-links social-links--footer mt-2">
+                    <a href="https://www.instagram.com/crazyup.com.br/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.linkedin.com/in/carloseust/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
             </div>
         </div>
     </div>
