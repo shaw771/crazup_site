@@ -586,6 +586,83 @@ a {
     z-index: 1;
 }
 
+/* Canais de contato organizados como pequenos painéis de acesso rápido. */
+.contact-intro h2 {
+    max-width: 480px;
+    color: var(--cu-navy);
+    letter-spacing: -.04em;
+}
+
+.contact-channels {
+    display: grid;
+    gap: 10px;
+    max-width: 470px;
+}
+
+.contact-channel {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 76px;
+    padding: 13px 16px;
+    border: 1px solid rgba(16,184,238,.14);
+    border-radius: 14px;
+    background: rgba(255,255,255,.72);
+    box-shadow: 0 10px 25px rgba(3,18,40,.035);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.contact-channel:hover {
+    border-color: rgba(16,184,238,.42);
+    box-shadow: 0 14px 30px rgba(3,18,40,.08);
+    transform: translateX(5px);
+}
+
+.contact-channel__tag {
+    display: grid;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border: 1px solid rgba(16,184,238,.3);
+    border-radius: 10px;
+    color: var(--cu-blue);
+    background: rgba(16,184,238,.06);
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.contact-channel strong,
+.contact-channel a {
+    display: block;
+}
+
+.contact-channel strong {
+    color: var(--cu-navy);
+    font-size: .88rem;
+}
+
+.contact-channel a {
+    margin-top: 2px;
+    color: #3d607d;
+    font-size: .88rem;
+    font-weight: 600;
+}
+
+.contact-channel a span {
+    color: var(--cu-orange);
+}
+
+.contact-channel--social {
+    align-items: flex-start;
+}
+
+.contact-channel--social .social-links a {
+    display: inline-flex;
+    margin-top: 0;
+}
+
 /* Painel do formulário: contraste escuro, transparência e profundidade. */
 .contact-card--future {
     position: relative;
