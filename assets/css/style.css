@@ -558,6 +558,118 @@ a {
     box-shadow: 0 18px 45px rgba(3,18,40,.06);
 }
 
+/* Página de contato com fundo de grade e luzes sutis, inspirados em interfaces digitais. */
+.contact-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 8% 15%, rgba(16,184,238,.12), transparent 22%),
+        radial-gradient(circle at 92% 85%, rgba(255,122,0,.1), transparent 23%),
+        #f8fbff;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .7;
+    background-image:
+        linear-gradient(rgba(16,184,238,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16,184,238,.055) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(90deg, black, transparent 85%);
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Painel do formulário: contraste escuro, transparência e profundidade. */
+.contact-card--future {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 4vw, 3rem);
+    border-color: rgba(16,184,238,.32);
+    background:
+        radial-gradient(circle at 100% 0, rgba(255,122,0,.19), transparent 28%),
+        linear-gradient(145deg, #071b33, #041225 70%);
+    box-shadow: 0 28px 70px rgba(2,13,30,.25), inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+.contact-card--future::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 115px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cu-blue), var(--cu-orange));
+    box-shadow: 0 0 18px rgba(16,184,238,.72);
+}
+
+.contact-card__heading {
+    margin-bottom: 28px;
+}
+
+.contact-card__heading span {
+    color: var(--cu-blue-light);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.contact-card__heading p {
+    margin: 9px 0 0;
+    color: rgba(255,255,255,.74);
+}
+
+.contact-card--future .form-label {
+    color: rgba(255,255,255,.88);
+}
+
+.contact-card--future .form-control,
+.contact-card--future .form-select {
+    border-color: rgba(141,199,232,.2);
+    color: #fff;
+    background-color: rgba(255,255,255,.055);
+}
+
+.contact-card--future .form-control::placeholder {
+    color: rgba(255,255,255,.4);
+}
+
+.contact-card--future .form-select {
+    color-scheme: dark;
+}
+
+.contact-card--future .form-select option {
+    color: #fff;
+    background: var(--cu-navy);
+}
+
+.contact-card--future .form-control:focus,
+.contact-card--future .form-select:focus {
+    border-color: var(--cu-blue);
+    background-color: rgba(16,184,238,.08);
+    box-shadow: 0 0 0 .22rem rgba(16,184,238,.16), 0 0 24px rgba(16,184,238,.12);
+}
+
+.contact-card--future .btn-orange {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(255,122,0,.22);
+}
+
+.contact-card--future #formMessage {
+    color: rgba(255,255,255,.62) !important;
+}
+
+.contact-card--future #formMessage.text-success {
+    color: #8ff0bc !important;
+}
+
 .form-control,
 .form-select {
     min-height: 52px;
