@@ -125,11 +125,18 @@
                         <textarea class="form-control" id="message" name="message" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-orange btn-lg w-100" type="submit">Enviar pelo WhatsApp</button>
+                        <div class="form-actions">
+                            <button class="btn btn-orange btn-lg" type="submit" data-contact-action="whatsapp">
+                                Enviar pelo WhatsApp <span aria-hidden="true">↗</span>
+                            </button>
+                            <button class="btn btn-email btn-lg" type="submit" data-contact-action="email">
+                                Enviar por e-mail <span aria-hidden="true">✉</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="col-12">
                         <div id="formMessage" class="small text-muted" role="status" aria-live="polite">
-                            Ao enviar, você será direcionado ao WhatsApp com sua mensagem preenchida.
+                            Escolha como prefere enviar sua mensagem: WhatsApp ou e-mail.
                         </div>
                     </div>
                 </div>

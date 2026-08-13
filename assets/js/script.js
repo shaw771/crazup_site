@@ -16,8 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.getElementById("contactForm");
     const formMessage = document.getElementById("formMessage");
+    let contactAction = "whatsapp";
 
     if (form) {
+        form.querySelectorAll("[data-contact-action]").forEach((button) => {
+            button.addEventListener("click", () => {
+                contactAction = button.dataset.contactAction;
+            });
+        });
+
         form.addEventListener("submit", (event) => {
             event.preventDefault();
 
@@ -36,11 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 `Serviço: ${data.get("service")}\n\n` +
                 `Mensagem:\n${data.get("message")}`;
             const whatsappUrl = `https://wa.me/5512991503338?text=${encodeURIComponent(text)}`;
+            const emailSubject = "Novo contato pelo site Crazy Up";
+            const emailUrl = `mailto:c.eusth@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(text)}`;
 
-            formMessage.textContent = "Abrindo o WhatsApp com sua mensagem...";
+            const isEmail = contactAction === "email";
+            formMessage.textContent = isEmail
+                ? "Abrindo seu aplicativo de e-mail com a mensagem preenchida..."
+                : "Abrindo o WhatsApp com sua mensagem...";
             formMessage.classList.remove("text-muted");
             formMessage.classList.add("text-success");
-            window.open(whatsappUrl, "_blank", "noopener");
+            window.open(isEmail ? emailUrl : whatsappUrl, "_blank", "noopener");
         });
     }
 });

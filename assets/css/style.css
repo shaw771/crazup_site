@@ -739,6 +739,35 @@ a {
     box-shadow: 0 10px 25px rgba(255,122,0,.22);
 }
 
+/* Ações de envio: o visitante escolhe WhatsApp ou aplicativo de e-mail. */
+.form-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.form-actions .btn {
+    min-height: 55px;
+    font-size: .95rem;
+}
+
+.btn-email {
+    border: 1px solid rgba(141,199,232,.36);
+    color: #fff;
+    background: rgba(255,255,255,.07);
+    font-weight: 700;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+    transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.btn-email:hover {
+    border-color: var(--cu-blue);
+    color: #fff;
+    background: rgba(16,184,238,.16);
+    box-shadow: 0 10px 25px rgba(16,184,238,.14);
+    transform: translateY(-2px);
+}
+
 .contact-card--future #formMessage {
     color: rgba(255,255,255,.62) !important;
 }
@@ -826,5 +855,9 @@ textarea.form-control {
 
     .social-links--footer {
         justify-content: flex-start;
+    }
+
+    .form-actions {
+        grid-template-columns: 1fr;
     }
 }
