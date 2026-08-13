@@ -354,6 +354,80 @@ a {
     color: var(--cu-blue-light);
 }
 
+/* Destaque especial para a mensagem de propósito da página inicial */
+.quote-card--highlight {
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(2rem, 5vw, 3.5rem);
+    border-color: rgba(16,184,238,.38);
+    background:
+        radial-gradient(circle at 88% 12%, rgba(255,122,0,.24), transparent 29%),
+        linear-gradient(135deg, rgba(16,184,238,.16), rgba(4,18,37,.94) 57%);
+    box-shadow: 0 24px 60px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+.quote-card--highlight::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 190px;
+    height: 190px;
+    right: -80px;
+    bottom: -110px;
+    border: 1px solid rgba(16,184,238,.35);
+    border-radius: 50%;
+}
+
+.quote-card--highlight .quote-label {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--cu-blue-light);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.quote-card--highlight h3 {
+    max-width: 500px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -.04em;
+}
+
+.quote-card--highlight h3 em {
+    color: var(--cu-orange);
+    font-style: normal;
+}
+
+.quote-card--highlight p {
+    max-width: 470px;
+    color: rgba(255,255,255,.78);
+    font-size: 1.05rem;
+}
+
+.quote-card--highlight .quote-line {
+    width: 76px;
+    height: 4px;
+    margin-top: 34px;
+    box-shadow: 0 0 18px rgba(255,122,0,.65);
+}
+
+.quote-card--highlight strong {
+    color: #fff;
+    font-size: .92rem;
+}
+
+@media (max-width: 575.98px) {
+    .quote-card--highlight .quote-mark {
+        top: 12px;
+        right: 20px;
+        font-size: 4rem;
+    }
+}
+
 .cta-section {
     padding: 80px 0;
     background: #fff;
