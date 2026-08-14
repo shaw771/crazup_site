@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página inicial: principal porta de entrada orgânica. -->
+  <url><loc>https://crazyup.com.br/</loc></url>
+  <!-- Página que detalha os serviços oferecidos. -->
+  <url><loc>https://crazyup.com.br/pages/servicos.html</loc></url>
+  <!-- Página institucional que explica a empresa. -->
+  <url><loc>https://crazyup.com.br/pages/sobre.html</loc></url>
+  <!-- Página que recebe pedidos de orçamento. -->
+  <url><loc>https://crazyup.com.br/pages/contato.html</loc></url>
+</urlset>

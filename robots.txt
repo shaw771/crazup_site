@@ -1,0 +1,7 @@
+# Regra para todos os robôs de busca.
+User-agent: *
+# Autoriza o rastreamento de todo o conteúdo público do site.
+Allow: /
+
+# Indica onde está a lista de URLs públicas do site.
+Sitemap: https://crazyup.com.br/sitemap.xml

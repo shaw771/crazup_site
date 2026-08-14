@@ -223,6 +223,58 @@ a {
     background: #fff;
 }
 
+/* Perfis de clientes: torna visíveis os cenários atendidos e conduz cada um ao contato. */
+.audience-section {
+    background: #f5f9fd;
+}
+
+.audience-card {
+    padding: 32px;
+    border: 1px solid #dfeaf3;
+    border-radius: var(--cu-radius);
+    background: #fff;
+    box-shadow: 0 14px 35px rgba(3,18,40,.05);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.audience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px rgba(3,18,40,.1);
+}
+
+.audience-avatar {
+    display: grid;
+    width: 56px;
+    height: 56px;
+    place-items: center;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    color: var(--cu-navy);
+    background: rgba(141,199,232,.35);
+    font-size: .78rem;
+    font-weight: 800;
+}
+
+.audience-avatar--orange { color: #a74900; background: rgba(255,122,0,.16); }
+.audience-avatar--blue { color: #006c97; background: rgba(16,184,238,.16); }
+
+.audience-label {
+    color: var(--cu-blue);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .13em;
+}
+
+.audience-card h3 {
+    margin: 11px 0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.audience-card p { color: var(--cu-muted); line-height: 1.7; }
+.audience-card a { color: var(--cu-orange); font-weight: 800; }
+
 .section-dark {
     background: #041225;
 }
