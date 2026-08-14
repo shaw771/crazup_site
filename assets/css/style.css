@@ -23,6 +23,8 @@
 
 html {
     scroll-behavior: smooth;
+    /* Em alguns navegadores móveis o elemento que rola é o html, não o body. */
+    overflow-x: hidden;
 }
 
 body {
@@ -31,6 +33,14 @@ body {
     color: var(--cu-text);
     background: var(--cu-navy);
     overflow-x: hidden;
+}
+
+/* Impede que sombras, animações ou elementos decorativos criem largura extra no celular. */
+main,
+.site-header,
+.site-footer {
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 a {
