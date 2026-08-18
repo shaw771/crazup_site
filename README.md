@@ -2,6 +2,8 @@
 
 Site institucional responsivo desenvolvido com HTML5, CSS3 e Bootstrap 5.
 
+Documentação para edição do portfólio e publicação: [DOCUMENTACAO.md](DOCUMENTACAO.md).
+
 ## Estrutura
 
 - `index.html` — página inicial
